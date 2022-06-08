@@ -21,11 +21,30 @@ fetch(endpoint, {
     },
     body: JSON.stringify(data)
 }).then(function(response) {
+    console.log(response)
     return response.json()
+    
 }).then(function(data) {
 //Function to handle response
     console.log(data)
+
+    //saving into local storage jm
+    sendToLocalStor(data);
 })
 
+var prevCal = document.querySelector("#prevCal")
 
+//event listener added jm
+prevCal.addEventListener("click", function(){
+console.log(prevCal)
+// var  
 
+});
+
+function sendToLocalStor(data) {
+localStorage.setItem("response", JSON.stringify(data));
+}
+ function retrieveFromStor (){
+     var grabFromLocalStor = JSON.parse(localStorage.getItem("response"))
+     console.log(grabFromLocalStor)
+ }

@@ -1,6 +1,6 @@
 *{
     margin: 0;
-    padding: 0;
+    padding: 0px;
     box-sizing: border-box;
 }
 #home::before {
@@ -23,6 +23,7 @@
     height:709px ;
     align-items: center;
 }
+
 .home-main {
     color:white;
     display: flex;
@@ -35,5 +36,10 @@
     color: #fff;
     text-align: center;
 }
+ .about-us {
+    padding: 20px;
+ }
+#footer{
+    padding: 40px;
 
-
+}

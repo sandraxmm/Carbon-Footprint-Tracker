@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0px;
     box-sizing: border-box;
+   
 }
 
 #home::before {
@@ -60,6 +61,7 @@ h3 {
     color: green;
     font-weight: bold;
 }
+
 
 .columns {
     padding:20px;

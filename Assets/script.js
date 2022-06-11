@@ -36,13 +36,16 @@ function carbonFootprintAsk(event) {
         return response.json();
     }).then(function(data){
         console.log(data)
+        carbonFootprint.append(data.carbonEquivalent);
+        sendToLocalStor(data.carbonEquivalent)
     })
 }
 //event listener for submit button
 button.addEventListener('click',carbonFootprintAsk);
 
+
 //append results to html - code NOT WORKING
-carbonFootprint.append(carbonFootprintAsk);
+
 // JAMES SECTION
 //JAVASCRIPT
 // James section
@@ -146,6 +149,7 @@ console.log(prevCal)
 });
 
 function sendToLocalStor(data) {
+    console.log(data)
 localStorage.setItem("response", JSON.stringify(data));
 }
  function retrieveFromStor (){

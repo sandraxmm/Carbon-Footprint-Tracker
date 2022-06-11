@@ -45,7 +45,7 @@
 
           <div class="navbar-dropdown">
             <a class="navbar-item" id="prevCal">
-              Previous Calculations
+              Previous Data
             </a>
             <a class="navbar-item" href="https://www.countryliving.com/shopping/g39375176/best-sustainable-products/ "
               target="_blank">
@@ -68,9 +68,9 @@
   </header>
 
   <main>
-
-    <div class="notification is-primary is-light" >
-      <h2 class="columns is-centered is-vcentered is-mobile">ABOUT US</h2>
+  <!--About Section (Javier's section)-->
+    <div class="notification is-primary is-dark">
+      <h2 class="columns is-centered is-vcentered is-mobile">About Us</h2>
       <p id="about-us">The way we live, the things we consume, the means we use to get around all of these things we do
         in our daily
         lives have a huge impact on our planet.
@@ -83,58 +83,50 @@
         emissions.</p>
     </div>
 
-  </main>
-  <!-- <footer id="footer">
-    <a>E-mail</a>
-    <a>twitter</a>
-    <a></a>
-   <p>If youre interested in helping reduce carbon foot print consider donating</p> <a href="https://carbonfund.org/donate/?gclid=EAIaIQobChMIvuTcioyY-AIVxiCtBh2CiwUVEAAYBCAAEgLge_D_BwE" target="_blank">Carbonfund.org</a>
-      
-  </footer> -->
+   
+  <!--Air quality (James section)-->
+    <section class="columns column-gap">
+      <div class="request">
+        <h3>Air Quality</h3>
+        <p>Enter your location to get the air quality information</p>
+        <input class="input is-success" type="text" placeholder="Location">
+        <button id="submit">Submit</button>
+      </div>
+      <div class="results">
 
-
-    <main>
-      <!--About Section (Javier's section)-->
-
-
-
-      <!--Air quality (James section)-->
-      <section id="air-qiality" class="left-section">
-        <div class="request">
-          <h2 id="air-quality-index">Air Quality</h2>
-          <p>Enter your location to get the air quality information</p>
-          <input class="location">
-          <button class="submit">Submit</button>
-        </div>
-        <div class="results">
           <!--information from API-->
-        </div>
-      </section>
+      </div>
+    </section>
 
       <!--Environmental news (Sandra section)-->
-      <section id="carbon-calculation" class="left-section">
-        <div class="request">
-          <h2 id="carbon-footprint-calculator">Carbon Footprint Calculator</h2>
-            <div class=car-travel>
-              <h3>From Car Travel</h3>
-              <p> Enter your distance traveled</p>
-              <input class="news-provider">
-            </div>
-          <button class="submit">Submit</button>
-        </div>
-        <div class="results">
-          <!--information from API-->
-        </div>
 
-        <!--Footer-->
-      </section>
-
+    <section class="columns column-gap">
+      <div id="carbon-request">
+        <h3>Carbon Footprint Calculator</h3>
+        <p> Enter your distance traveled</p>
+        <input id="mileage" class="input is-success" type="text" placeholder="Car Mileage">
+        <select id="vehicle" class="input is-success dropdown-content" placeholder="Car Type">
+          <option class= "dropdown-item" value="" disabled selected>Select a car type...</option>
+          <option class= "dropdown-item" value="SmallDieselCar">Small Diesel Car</option>
+          <option class= "dropdown-item" value="MediumDieselCar">Medium Diesel Car</option>
+          <option class= "dropdown-item" value="LargeDieselCar">Large Diesel Car</option>
+          <option class= "dropdown-item" value="MediumHybridCar">Medium Hybrid Car</option>
+          <option class= "dropdown-item" value="LargeHybridCar">Large Hybrid Car</option>
+          <option class= "dropdown-item" value="SmallMotorBike">Small Motor Bike</option>
+          <option class= "dropdown-item" value="Medium Motor Bike">Medium Motor Bike</option>
+          <option class= "dropdown-item" value="Large Motor Bike">Large Motor Bike</option>
+        </select>
+        <button id="submit-carbonfootprint">Submit</button>
+      </div>
+      <div id="data">
+        <div id="results"></div><!--append information from API-->
+      </div>
+    </section>
 
 
     </main>
 
-    <script src="./Assets/script.js"></script>
-
+  <!--Footer-->
   <footer class="footer" id="footer">
     <div class="content has-text-centered">
       <p>
@@ -147,14 +139,10 @@
   </footer>
 
 
-
-
-
-
-
-
-  <script src="./Assets/script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 </body>
+
+<script src="./Assets/script.js"></script>
 
 </html>

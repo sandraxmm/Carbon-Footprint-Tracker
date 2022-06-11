@@ -97,7 +97,74 @@
           <!--information from API-->
       </div>
     </section>
+    <!--James HTML-->
+    <div class="flex-row justify-space-between col-12">
+      <div class="col-12 col-md-4">
 
+        <div class="card">
+          <h3 class="card-header text-uppercase">Search By longtitude/latitude</h3>
+          <form id="city-form" class="card-body">
+            <label class="form-lable" for="cityname">City Name</label>
+            <input name="latitude" placeholder="latitude" id="lat" type="number"  class="loc-input" step="0.0001" />
+            <input name="longtitude" placeholder="longitude" id="lon" type="number"  class="loc-input" step="0.0001" />
+            <input value="GetAQI" type="button" class="btn">
+            <label for="error-msg" style="color: red;"></label><br />
+            
+          </form>
+        </div>
+        <div class="col-12 col-md-8">
+          <div class="card hidden" id="current-weather-card">
+            <h2 class="card-header" id="weather-status"></h2>
+            <div class="card-body" id="current-weather">
+  
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="component-container">
+        <span class="air-quality">...</span>
+        <span><br></span>
+        <span class="air-quality-status">...</span>
+        <h2 class="sub-heading">
+          Concentration of pollutants in air :
+        </h2>
+
+        <div>
+          <h3 class="component-names">Carbon Monoxide :</h3>
+          <span class="component-val" data-comp="co"></span>
+        </div>
+        <div>
+          <h3 class="component-names">Nitrogen Monoxide :</h3>
+          <span class="component-val" data-comp="no"></span>
+        </div>
+        <div>
+          <h3 class="component-names">Nitrogen Dioxide :</h3>
+          <span class="component-val" data-comp="no2"></span>
+        </div>
+        <div>
+          <h3 class="component-names">Ozone :</h3>
+          <span class="component-val" data-comp="o3"></span>
+        </div>
+        <div>
+          <h3 class="component-names">Sulphur Dioxide :</h3>
+          <span class="component-val" data-comp="so2"></span>
+        </div>
+        <div>
+          <h3 class="component-names">Fine particles matter :</h3>
+          <span class="component-val" data-comp="pm2_5"></span>
+        </div>
+        <div>
+          <h3 class="component-names">Coarse particulate matter :</h3>
+          <span class="component-val" data-comp="pm10"></span>
+        </div>
+        <div>
+          <h3 class="component-names">Ammonia :</h3>
+          <span class="component-val" data-comp="nh3"></span>
+        </div>
+        <!--  micrograms per cubic meter of air (μg/m3)  -->
+      </div>
+    <!-- END James HTML-->
       <!--Environmental news (Sandra section)-->
 
     <section class="columns column-gap">

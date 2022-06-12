@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <nav class="navbar" role="navigation" aria-label="main navigation" id="jump-to-top">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://bulma.io">
         <img src="./Assets/image.png" width="35" height="35">
@@ -69,9 +69,9 @@
 
   <main>
   <!--About Section (Javier's section)-->
-    <div class="notification is-primary is-dark">
+    <div id="about-us" class="notification is-info is-dark">
       <h2 class="columns is-centered is-vcentered is-mobile">About Us</h2>
-      <p id="about-us">The way we live, the things we consume, the means we use to get around all of these things we do
+      <p >The way we live, the things we consume, the means we use to get around all of these things we do
         in our daily
         lives have a huge impact on our planet.
         According to <a href="https://www.who.int/" target="_blank">WHO</a> Carbon footprint is the amount of gases that
@@ -86,93 +86,75 @@
    
   <!--Air quality (James section)-->
     <section class="columns column-gap">
-      <div class="request">
-        <h3 id="air-quality-index">Air Quality</h3>
-        <p>Enter your location to get the air quality information</p>
-        <input class="input is-success" type="text" placeholder="Location">
-        <button id="submit">Submit</button>
-      </div>
-      <div class="results">
 
-          <!--information from API-->
-      </div>
-    </section>
-    <!--James HTML-->
-    <div class="flex-row justify-space-between col-12">
-      <div class="col-12 col-md-4">
+      <div class="container">
+        <h3 id="air-quality-index">Air Quality</h3>
+        <p>Enter your location longitude and latitude to get the air quality information</p>
 
         <div class="card">
-          <h3 class="card-header text-uppercase">Search By longtitude/latitude</h3>
           <form id="city-form" class="card-body">
-            <label class="form-lable" for="cityname">City Name</label>
-            <input name="latitude" placeholder="latitude" id="lat" type="number"  class="loc-input" step="0.0001" />
-            <input name="longtitude" placeholder="longitude" id="lon" type="number"  class="loc-input" step="0.0001" />
-            <input value="GetAQI" type="button" class="btn">
-            <label for="error-msg" style="color: red;"></label><br />
-            
+            <input name="latitude" placeholder="Latitude" id="lat" type="number"  class="input is-info" step="0.0001" />
+            <input name="longtitude" placeholder="Longitude" id="lon" type="number"  class="input is-info" step="0.0001" />
+            <input value="GetAQI" type="button" id="btn" class="button is-info">
+            <label for="error-msg" style="color: red;"></label>
           </form>
         </div>
-        <div class="col-12 col-md-8">
-          <div class="card hidden" id="current-weather-card">
-            <h2 class="card-header" id="weather-status"></h2>
-            <div class="card-body" id="current-weather">
-  
-            </div>
+        <!--Message based on air quality-->
+        <div>
+          <span class="air-quality">...</span>
+          <span><br></span>
+          <span class="air-quality-status">...</span>
+        </div>
+      </div>
+
+      <!--Results for concentraction of pollutants in air-->
+      <div class="container">
+        <h3 class="sub-heading">Air pollutants</h3>
+        <div>
+          <div>
+            <h4 class="component-names">Carbon Monoxide :</h4>
+            <span class="component-val" data-comp="co"></span>
+          </div>
+          <div>
+            <h4 class="component-names">Nitrogen Monoxide :</h4>
+            <span class="component-val" data-comp="no"></span>
+          </div>
+          <div>
+            <h4 class="component-names">Nitrogen Dioxide :</h4>
+            <span class="component-val" data-comp="no2"></span>
+          </div>
+          <div>
+            <h4 class="component-names">Ozone :</h4>
+            <span class="component-val" data-comp="o3"></span>
+          </div>
+          <div>
+            <h4 class="component-names">Sulphur Dioxide :</h4>
+            <span class="component-val" data-comp="so2"></span>
+          </div>
+          <div>
+            <h4 class="component-names">Fine particles matter :</h4>
+            <span class="component-val" data-comp="pm2_5"></span>
+          </div>
+          <div>
+            <h4 class="component-names">Coarse particulate matter :</h4>
+            <span class="component-val" data-comp="pm10"></span>
+          </div>
+          <div>
+            <h4 class="component-names">Ammonia :</h4>
+            <span class="component-val" data-comp="nh3"></span>
           </div>
         </div>
-
       </div>
-      <div class="component-container">
-        <span class="air-quality">...</span>
-        <span><br></span>
-        <span class="air-quality-status">...</span>
-        <h2 class="sub-heading">
-          Concentration of pollutants in air :
-        </h2>
+    </section>
 
-        <div>
-          <h3 class="component-names">Carbon Monoxide :</h3>
-          <span class="component-val" data-comp="co"></span>
-        </div>
-        <div>
-          <h3 class="component-names">Nitrogen Monoxide :</h3>
-          <span class="component-val" data-comp="no"></span>
-        </div>
-        <div>
-          <h3 class="component-names">Nitrogen Dioxide :</h3>
-          <span class="component-val" data-comp="no2"></span>
-        </div>
-        <div>
-          <h3 class="component-names">Ozone :</h3>
-          <span class="component-val" data-comp="o3"></span>
-        </div>
-        <div>
-          <h3 class="component-names">Sulphur Dioxide :</h3>
-          <span class="component-val" data-comp="so2"></span>
-        </div>
-        <div>
-          <h3 class="component-names">Fine particles matter :</h3>
-          <span class="component-val" data-comp="pm2_5"></span>
-        </div>
-        <div>
-          <h3 class="component-names">Coarse particulate matter :</h3>
-          <span class="component-val" data-comp="pm10"></span>
-        </div>
-        <div>
-          <h3 class="component-names">Ammonia :</h3>
-          <span class="component-val" data-comp="nh3"></span>
-        </div>
-        <!--  micrograms per cubic meter of air (μg/m3)  -->
-      </div>
-    <!-- END James HTML-->
-      <!--Environmental news (Sandra section)-->
+    <!-- Carbon Footprint Calculator (Sandra section)-->
 
-    <section class="columns column-gap">
+    <section class="container">
       <div id="carbon-request">
         <h3 id="carbon-footprint-calculator">Carbon Footprint Calculator</h3>
         <p> Enter your distance traveled</p>
-        <input id="mileage" class="input is-success" type="text" placeholder="Car Mileage">
-        <select id="vehicle" class="input is-success dropdown-content" placeholder="Car Type">
+        <input id="mileage" class="input is-info" type="text" placeholder="Car Mileage">
+        <select id="vehicle" class="input is-info dropdown-content" placeholder="Car Type">
           <option class= "dropdown-item" value="" disabled selected>Select a car type...</option>
           <option class= "dropdown-item" value="SmallDieselCar">Small Diesel Car</option>
           <option class= "dropdown-item" value="MediumDieselCar">Medium Diesel Car</option>
@@ -183,10 +165,13 @@
           <option class= "dropdown-item" value="Medium Motor Bike">Medium Motor Bike</option>
           <option class= "dropdown-item" value="Large Motor Bike">Large Motor Bike</option>
         </select>
-        <button id="submit-carbonfootprint">Submit</button>
+        <input id="submit-carbonfootprint" value="Submit" type="button" class="button is-info">
       </div>
       <div id="data">
-        <div id="results"></div><!--append information from API-->
+        <div>
+          <h4>Carbon Footprint Results</h4>
+          <span id="carbon-results"></span>
+        </div><!--append information from API-->
       </div>
     </section>
 
@@ -202,6 +187,7 @@
         <a href="https://carbonfund.org/donate/?gclid=EAIaIQobChMIvuTcioyY-AIVxiCtBh2CiwUVEAAYBCAAEgLge_D_BwE"
           target="_blank">Carbonfund.org</a>.
       </p>
+      <a href="#jump-to-top">JUMP TO TOP</a>
     </div>
   </footer>
 

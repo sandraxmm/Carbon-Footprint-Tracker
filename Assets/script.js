@@ -42,7 +42,7 @@ var gatherLocation = function(pos) {
 };
 
 var GetApi = async function(event) {
-    //event.preventDefault();
+    // event.preventDefault();
     if(lat == null) {
         lat = latInput.value;
     }
@@ -57,8 +57,9 @@ var GetApi = async function(event) {
     var airdata = await data.json()
     console.log(airdata);
     setComponent(airdata);
+    setAirAqi(airdata);
 }
-
+// set the current air status at the location
 const setAirAqi = function(airdata) {
     const Aqi = airdata.list[0].main.aqi;
     let airStats = ""; color = "";
@@ -66,29 +67,33 @@ const setAirAqi = function(airdata) {
     // air quality status
     switch(Aqi) {
         case 1:
-          airStats = "Perfect"
+          airStats = "Perfect Condition"
           color = "green"
           break;
         case 2:
-            airStats = "Fair"
+            airStats = "Fair Condition"
             color = "yellow"
             break
           // code block
           case 3:
-            airStats = "Moderate"
+            airStats = "Moderate Condition"
             color = "rgb(201, 204, 13)"
           break;
           case 4:
-            airStats = "Poor"
+            airStats = "Poor Condition"
 			color = "rgb(204, 83, 13)"
+			break
+            case 5:
+			airStats = "Very Poor Condition"
+			color = "rgb(204, 13, 13)"
 			break
 
         default:
             airStats = "Unknown"
           // code block
       }
-      AirqualityStats.innerText = airStats;
-      AirqualityStats.getElementsByClassName.color = color;
+      AirqualityStatus.innerText = airStats;
+      AirqualityStatus.getElementsByClassName.color = color;
 }
 
 var gatherError = function(e) {
@@ -100,7 +105,7 @@ var setComponent = function(airdata) {
     var component = {...airdata.list[0].components}
     componentsEl.forEach(function(ele) {
         var attr = ele.getAttribute("data-comp")
-        ele.innerText = component[attr] += "μg/m3"
+        ele.innerText = component[attr] += " μg/m3"
     })
 };
 SearchBtn.addEventListener("click",GetApi);

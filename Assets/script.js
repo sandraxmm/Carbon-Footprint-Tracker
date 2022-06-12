@@ -11,6 +11,7 @@ var AirqualityStatus = document.querySelector(".air-quality-status")
 var lat = null
 var lon = null
 
+
 //Carbon Footprint Calculator
 var button = document.querySelector("#submit-carbonfootprint")
 var carMileage = document.querySelector("#mileage")
@@ -20,6 +21,7 @@ var carbonAPI = 'https://carbonfootprint1.p.rapidapi.com/CarbonFootprintFromCarT
 var apiKey = '2b55785d9emsh128efc9a2b8a7e8p11212ajsn4abb761087ca'
 
 //Air Quality API function
+
 // get user location when they visit page
 var RequestUserLocation = function() {
     if (navigator.geolocation) {
@@ -142,9 +144,11 @@ var prevCal = document.querySelector("#prevCal")
 //event listener added jm
 prevCal.addEventListener("click", function(){
 console.log(prevCal)
+
 });
 
 function sendToLocalStor(data) {
+    console.log(data)
 localStorage.setItem("response", JSON.stringify(data));
 }
  function retrieveFromStor (){

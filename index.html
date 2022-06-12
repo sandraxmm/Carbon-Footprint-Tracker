@@ -5,13 +5,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Air-Quality-and-Carbon-Footprint-Calculator</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="./Assets/style.css">
 </head>
 
 <body>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <nav class="navbar" role="navigation" aria-label="main navigation" id="jump-to-top">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://bulma.io">
         <img src="./Assets/image.png" width="35" height="35">
@@ -63,15 +63,15 @@
 
   <header id="home">
     <div class="home-main">
-      <h1 class="introduction">CARBON FOOTPRINT CALCULATOR</h1>
+      <h1 class="introduction"> AIR QUALITY & CARBON FOOTPRINT CALCULATOR</h1>
     </div>
   </header>
 
   <main>
   <!--About Section (Javier's section)-->
-    <div class="notification is-info is-dark">
+    <div id="about-us" class="notification is-info is-dark">
       <h2 class="columns is-centered is-vcentered is-mobile">About Us</h2>
-      <p id="about-us">The way we live, the things we consume, the means we use to get around all of these things we do
+      <p >The way we live, the things we consume, the means we use to get around all of these things we do
         in our daily
         lives have a huge impact on our planet.
         According to <a href="https://www.who.int/" target="_blank">WHO</a> Carbon footprint is the amount of gases that
@@ -85,10 +85,13 @@
 
    
   <!--Air quality (James section)-->
+
     <section class="container">
       <div class="smaller-container">
-        <h3>Air Quality</h3>
+        <h3 id="air-quality-index">Air Quality</h3>
+
         <p>Enter your location longitude and latitude to get the air quality information</p>
+
         <div class="card">
           <form id="city-form" class="card-body">
             <input name="latitude" placeholder="Latitude" id="lat" type="number"  class="input is-info" step="0.0001" />
@@ -148,8 +151,10 @@
     <!-- Carbon Footprint Calculator (Sandra section)-->
 
     <section class="container">
+
       <div id="carbon-request" class="smaller-container">
-        <h3>Carbon Footprint Calculator</h3>
+        <h3 id="carbon-footprint-calculator">Carbon Footprint Calculator</h3>
+
         <p> Enter your distance traveled</p>
         <div class="card">
           <input id="mileage" class="input is-info" type="text" placeholder="Car Mileage">
@@ -188,6 +193,7 @@
         <a href="https://carbonfund.org/donate/?gclid=EAIaIQobChMIvuTcioyY-AIVxiCtBh2CiwUVEAAYBCAAEgLge_D_BwE"
           target="_blank">Carbonfund.org</a>.
       </p>
+      <a href="#jump-to-top">JUMP TO TOP</a>
     </div>
   </footer>
 

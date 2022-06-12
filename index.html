@@ -85,10 +85,11 @@
 
    
   <!--Air quality (James section)-->
-    <section class="columns column-gap">
 
-      <div class="container">
-        <h3 id="air-quality-index">Air Quality</h3>
+    <section class="container">
+      <div class="smaller-container">
+        <h3>Air Quality</h3>
+
         <p>Enter your location longitude and latitude to get the air quality information</p>
 
         <div class="card">
@@ -108,7 +109,7 @@
       </div>
 
       <!--Results for concentraction of pollutants in air-->
-      <div class="container">
+      <div class="smaller-container">
         <h3 class="sub-heading">Air pollutants</h3>
         <div>
           <div>
@@ -150,26 +151,31 @@
     <!-- Carbon Footprint Calculator (Sandra section)-->
 
     <section class="container">
-      <div id="carbon-request">
-        <h3 id="carbon-footprint-calculator">Carbon Footprint Calculator</h3>
+
+      <div id="carbon-request" class="smaller-container">
+        <h3>Carbon Footprint Calculator</h3>
+
         <p> Enter your distance traveled</p>
-        <input id="mileage" class="input is-info" type="text" placeholder="Car Mileage">
-        <select id="vehicle" class="input is-info dropdown-content" placeholder="Car Type">
-          <option class= "dropdown-item" value="" disabled selected>Select a car type...</option>
-          <option class= "dropdown-item" value="SmallDieselCar">Small Diesel Car</option>
-          <option class= "dropdown-item" value="MediumDieselCar">Medium Diesel Car</option>
-          <option class= "dropdown-item" value="LargeDieselCar">Large Diesel Car</option>
-          <option class= "dropdown-item" value="MediumHybridCar">Medium Hybrid Car</option>
-          <option class= "dropdown-item" value="LargeHybridCar">Large Hybrid Car</option>
-          <option class= "dropdown-item" value="SmallMotorBike">Small Motor Bike</option>
-          <option class= "dropdown-item" value="Medium Motor Bike">Medium Motor Bike</option>
-          <option class= "dropdown-item" value="Large Motor Bike">Large Motor Bike</option>
-        </select>
+        <div class="card">
+          <input id="mileage" class="input is-info" type="text" placeholder="Car Mileage">
+          <select id="vehicle" class="input is-info dropdown-content" placeholder="Car Type">
+            <option class= "dropdown-item" value="" disabled selected>Select a car type...</option>
+            <option class= "dropdown-item" value="SmallDieselCar">Small Diesel Car</option>
+            <option class= "dropdown-item" value="MediumDieselCar">Medium Diesel Car</option>
+            <option class= "dropdown-item" value="LargeDieselCar">Large Diesel Car</option>
+            <option class= "dropdown-item" value="MediumHybridCar">Medium Hybrid Car</option>
+            <option class= "dropdown-item" value="LargeHybridCar">Large Hybrid Car</option>
+            <option class= "dropdown-item" value="SmallMotorBike">Small Motor Bike</option>
+            <option class= "dropdown-item" value="Medium Motor Bike">Medium Motor Bike</option>
+            <option class= "dropdown-item" value="Large Motor Bike">Large Motor Bike</option>
+          </select>
+        </div>
         <input id="submit-carbonfootprint" value="Submit" type="button" class="button is-info">
       </div>
-      <div id="data">
+      <div id="data" class="smaller-container">
         <div>
-          <h4>Carbon Footprint Results</h4>
+          <h3>Carbon Footprint Results</h3>
+          <h4>Carbon Dioxide Equivalent</h4>
           <span id="carbon-results"></span>
         </div><!--append information from API-->
       </div>

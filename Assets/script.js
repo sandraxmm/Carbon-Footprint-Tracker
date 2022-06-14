@@ -69,7 +69,7 @@ const setAirAqi = function(airdata) {
     // air quality status
     switch(Aqi) {
         case 1:
-          airStats = ""
+          airStats = "Perfect Condition"
           color = "green"
           break;
         case 2:

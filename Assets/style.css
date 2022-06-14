@@ -42,6 +42,9 @@
 
 .about-us {
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #footer{
@@ -72,8 +75,47 @@ h4 {
     padding:20px;
     display: flex;
     flex-direction: column;
+    flex-direction: column;
 }
 
 .smaller-container {
-    padding: 30px;
+    
+    display: block;
+
 }
+
+#components-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: inherit;
+    justify-items: center;
+    margin-top: 30px;
+}
+#border-box {
+    border: 1.5px solid rgb(48, 124, 187);
+    padding: 5px;
+    border-radius: 5px;
+}
+.label {
+    color: white;
+    padding: 5px;
+}
+.component-val {
+    display: flex;
+    justify-content: center;
+}
+#airQuality-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+
+/* Responsive for smaller than 768px  */
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class*="col-12"] {
+      width: 100%;
+    }
+  }

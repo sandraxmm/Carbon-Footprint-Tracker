@@ -132,6 +132,7 @@ function carbonFootprintAsk(event) {
         return response.json();
     }).then(function(data){
         console.log(data);
+        carbonFootprint.innerHTML="";
         carbonFootprint.append(data.carbonEquivalent);
         sendToLocalStor(data.carbonEquivalent);
     })

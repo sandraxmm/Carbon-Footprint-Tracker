@@ -79,10 +79,8 @@ h4 {
 }
 
 .smaller-container {
-    
     display: block;
     padding: 30px;
-
 }
 
 #components-container {
@@ -111,7 +109,6 @@ h4 {
     align-items: center;
     padding: 10px;
 }
-
 
 /* Responsive for smaller than 768px  */
 @media only screen and (max-width: 768px) {

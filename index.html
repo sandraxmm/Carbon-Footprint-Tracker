@@ -90,7 +90,7 @@
       <div class="smaller-container">
         <h3 id="air-quality-index">Air Quality</h3>
 
-        <p>Enter your location longitude and latitude to get the air quality information</p>
+        <p>Your Location</p>
 
         <div class="card">
           <form id="city-form" class="card-body">
@@ -101,47 +101,48 @@
           </form>
         </div>
         <!--Message based on air quality-->
-        <div>
+        <div id="airQuality-container">
           <span class="air-quality">...</span>
           <span><br></span>
-          <span class="air-quality-status">...</span>
+          <span class="label air-quality-status">...</span>
+          
         </div>
       </div>
 
       <!--Results for concentraction of pollutants in air-->
-      <div class="smaller-container">
-        <h3 class="sub-heading">Air pollutants</h3>
-        <div>
-          <div>
-            <h4 class="component-names">Carbon Monoxide :</h4>
+      <div class="smaller-container col-12">
+        <h3 class="sub-heading">Air Pollutants</h3>
+        <div id="components-container">
+          <div id="border-box">
+            <h4 class="component-names">Carbon Monoxide</h4>
             <span class="component-val" data-comp="co"></span>
           </div>
-          <div>
-            <h4 class="component-names">Nitrogen Monoxide :</h4>
+          <div id="border-box" >
+            <h4 class="component-names">Nitrogen Monoxide</h4>
             <span class="component-val" data-comp="no"></span>
           </div>
-          <div>
-            <h4 class="component-names">Nitrogen Dioxide :</h4>
+          <div id="border-box">
+            <h4 class="component-names">Nitrogen Dioxide</h4>
             <span class="component-val" data-comp="no2"></span>
           </div>
-          <div>
-            <h4 class="component-names">Ozone :</h4>
+          <div id="border-box">
+            <h4 class="component-names">Ozone</h4>
             <span class="component-val" data-comp="o3"></span>
           </div>
-          <div>
-            <h4 class="component-names">Sulphur Dioxide :</h4>
+          <div id="border-box">
+            <h4 class="component-names">Sulphur Dioxide:</h4>
             <span class="component-val" data-comp="so2"></span>
           </div>
-          <div>
-            <h4 class="component-names">Fine particles matter :</h4>
+          <div id="border-box">
+            <h4 class="component-names">Fine particles matter</h4>
             <span class="component-val" data-comp="pm2_5"></span>
           </div>
-          <div>
-            <h4 class="component-names">Coarse particulate matter :</h4>
+          <div id="border-box">
+            <h4 class="component-names">Coarse particulate matter</h4>
             <span class="component-val" data-comp="pm10"></span>
           </div>
-          <div>
-            <h4 class="component-names">Ammonia :</h4>
+          <div id="border-box">
+            <h4 class="component-names">Ammonia</h4>
             <span class="component-val" data-comp="nh3"></span>
           </div>
         </div>

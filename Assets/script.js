@@ -23,7 +23,8 @@ var apiKey = '2b55785d9emsh128efc9a2b8a7e8p11212ajsn4abb761087ca'
 //Air Quality API function
 
 // get user location when they visit page
-var RequestUserLocation = function() {
+var RequestUserLocation = function(event) {
+    // event.preventDefault();
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(gatherLocation, gatherError)
     }else {
@@ -42,7 +43,7 @@ var gatherLocation = function(pos) {
 };
 
 var GetApi = async function(event) {
-    // event.preventDefault();
+    //  event.preventDefault();
     if(lat == null) {
         lat = latInput.value;
     }
@@ -63,16 +64,17 @@ var GetApi = async function(event) {
 const setAirAqi = function(airdata) {
     const Aqi = airdata.list[0].main.aqi;
     let airStats = ""; color = "";
-    Airquality.innerText = Aqi
+    let text = "AQI is "
+    Airquality.innerText = text + Aqi
     // air quality status
     switch(Aqi) {
         case 1:
-          airStats = "Perfect Condition"
+          airStats = ""
           color = "green"
           break;
         case 2:
             airStats = "Fair Condition"
-            color = "yellow"
+            color = "rgb(0,255,0)"
             break
           // code block
           case 3:
@@ -81,11 +83,11 @@ const setAirAqi = function(airdata) {
           break;
           case 4:
             airStats = "Poor Condition"
-			color = "rgb(204, 83, 13)"
+			color = "rgb(255, 87, 51 )"
 			break
             case 5:
 			airStats = "Very Poor Condition"
-			color = "rgb(204, 13, 13)"
+			color = "rgb(255, 0, 0)"
 			break
 
         default:
@@ -93,7 +95,7 @@ const setAirAqi = function(airdata) {
           // code block
       }
       AirqualityStatus.innerText = airStats;
-      AirqualityStatus.getElementsByClassName.color = color;
+      AirqualityStatus.style.color = color;
 }
 
 var gatherError = function(e) {
@@ -155,3 +157,6 @@ localStorage.setItem("response", JSON.stringify(data));
      var grabFromLocalStor = JSON.parse(localStorage.getItem("response"))
      console.log(grabFromLocalStor)
  }
+
+
+ 
